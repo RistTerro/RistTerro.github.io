@@ -1,48 +1,68 @@
-body, h1 {
-    margin:0;
-    padding:0;
-    box-sizing:border-box ;
-}
-body {
-    background-color:#323131;
-    color:white;
-    height:100vh;
-    width:100%;
-    position:relative;
-}
-h1 {
-    width:200px;
-    height:40px;
-    background-color:white;
-    color:black;
-}
-ul{
-    position:absolute;
-    height:100%;
-    top:0;
-    left:0;
-    width:90%;
-    list-style-type:none;
-}
-ul li{
-    width:100%;
-    cursor:pointer;
-    margin:20px 0px;
-    padding:20px 10px;
-    text-align:center;
-    transition:.5s;
-    
+@import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
+
+* {
+  margin:0;
+  padding:0;
+  outline:none;
 }
 
-ul li a{
-    color:#fff;
-    text-decoration:none;
-    text-transform:uppercase;
-    transition:.5s;
+body, html {
+  height:100%;
+  width:100%;
 }
-ul li:hover a{
-    color:red;
+
+body {
+  background-color:#323131;
+  font-family:Trebuchet MS, Helvetica;
 }
-ul li:hover{
-    background:#333;
+
+header {
+  width:100%;
+  padding:10px 0.5% 0px 0.5%;
+  background:transparent;
+  float:left;
+  position:fixed;
+}
+
+#logo {
+  color:#fff;
+  cursor:pointer;
+}
+
+#logo span {
+  font-size:1.7em;
+  line-height:45px;
+  margin-left:40px;
+  font-family:'Suez One', serif;
+}
+
+@media (min-width:701px;) {
+  #logo {
+    float:left;
+    width:30%;
+    font-size:1.1em;
+  }
+  #about {
+    float:right;
+    width:67%;
+  }
+}
+
+@media (max-width:700px;) {
+  #logo {
+    margin-top:15px;
+    width:100%;
+    font-size:1.5em;
+  }
+  #about {
+    float:left;
+    width:100%;
+  }
+}
+
+#about {
+  text-align:center;
+  font-size:1em;
+  line-height:40px;
+  margin-bottom:10px;
 }
