@@ -1,28 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>RistTerro</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RistTerro</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-       <div id="logo">
-            <span>RistTerro</span>
-       </div>
-       <div id="about">
-           <a href="#" onclick="slowScroll('#contacts')">Контакты</a>
-           <a href="#">-</a>
-           <a href="#">-</a>
-           <a href="#">-</a>
-       </div>
-    </header>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-    function slowScroll(id){
-      $('body').animate({
-          scrollTop: $(id).offset().top
-      } 500);
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>RistTerro</span>
+    </div>
+    <div id="about">
+      <a href="#" onclick="slowScroll('#main')">-</a>
+      <a href="#" onclick="slowScroll('#overview')">-</a>
+      <a href="#" onclick="slowScroll('#contacts')">Контакты</a>
+      <a href="#" onclick="slowScroll('#faq')">-</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Программирование</h1>
+    <h3>как способ жизни!</h3>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Заголовок Блока</h2>
+      <span>Описание Блока</span>
+    </div>
+    <div class="text">
+      <span>Текст блока</span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Заголовок</h2>
+    <h4>Ещё что-то</h4>
+
+    <div class="img">
+      <img src="" alt="">
+      <span>Фото</span>
+    </div>
+  </div>
+
+  <div id="contacts">
+    <center><h5>Обратная связь</h5></center>
+    <form id="form_input">
+      <label for="name">Имя <span>*</span></label><br>
+      <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+      <label for="email">Ваша почта <span>*</span></label><br>
+            <input type="email" placeholder="Введите email" name="email" id="email"><br>
+            <label for="message">Сообщение <span>*</span></label><br>
+            <textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+            <div id="mess_send" class="btn">Отправить</div>
+    </form>
+  </div>
+
+  <div id="faq">
+    <div>
+      <span class="title">Заголовок</span><br>
+      <span class="heading">Описание</span>
+      <p>Какой-то текст</p>
+      <span class="heading">Описание</span>
+      <p>Какой-то текст</p>
+      <span class="heading">Описание</span>
+      <p>Какой-то текст</p>
+    </div>
+    <div>
+      <span class="title">Заголовок</span><br>
+      <span class="heading">Описание</span>
+      <p>Какой-то текст</p>
+      <span class="heading">Описание</span>
+      <p>Какой-то текст</p>
+      <span class="heading">Описание</span>
+      <p>Какой-то текст</p>
+    </div>
+    <div>
+      <span class="title">Заголовок</span><br>
+      <span class="heading">Описание</span>
+      <p>Какой-то текст</p>
+      <span class="heading">Описание</span>
+      <p>Какой-то текст</p>
+      <span class="heading">Описание</span>
+      <p>Какой-то текст</p>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
     }
-    </script>
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
 </body>
 </html>
