@@ -1,0 +1,65 @@
+body .tooltip-inner {
+  background: #f3f3f3;
+  color: #252525;
+  font-size: 12px;
+  padding: 6px 16px;
+}
+
+body .tooltip .arrow::before {
+  border-bottom-color: #f3f3f3;
+}
+
+.content {
+  margin-top: 55px;
+}
+
+.content-main {
+  background-color: white;
+  padding: 23px 6px 0 6px;
+  border-radius: 0 0 4px 4px;
+}
+
+.content-main0 {
+  padding: 23px 6px;
+}
+
+.required:after {
+  content: '*';
+  color: #d51818;
+}
+
+.mt-75 {
+  margin-top: 75px;
+}
+
+.avatar {
+  width: 100px;
+}
+
+.avatar-sm {
+  width: 60px;
+}
+
+.phone {
+  max-width: 231px;
+  min-height: 460px;
+}
+
+.apps-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apps-block div a {
+  text-decoration: none;
+}
+
+.app-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  position: relative;
+}
