@@ -1,6 +1,0 @@
---colors
---exit
---timeout 5000
---require should
-tests/lifecycle.js
-tests/**/*.test.js
